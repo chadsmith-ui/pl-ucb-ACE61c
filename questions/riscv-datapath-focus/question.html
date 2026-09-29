@@ -1,0 +1,9 @@
+<pl-question-panel>
+  <p>Consider the single-cycle datapath and the instruction <code>lw x5, 0(x6)</code>.</p>
+  <p>Focus on the <b>bold</b> wires going into the write-back mux. Grey means "not set yet": click a wire to turn it
+     <b style="color:#d00">red</b> (carries the value this instruction uses) or <b>black</b> (does not). Some wires start with a
+     value that may be wrong, so check every bold wire. The thin red wires are given and cannot be changed. Enter the WBSel value in hexadecimal in the gray box.</p>
+</pl-question-panel>
+
+<pl-riscv-datapath answers-name="dp" instruction="lw x5, 0(x6)" bold-wires="to:wbmux"
+    initial-wires="j_alu2__wbmux_1, alu__j_alu1, j_alu1__dmem_addr" initial-off-wires="wbsel__wbmux_sel" value-boxes="wbsel"></pl-riscv-datapath>

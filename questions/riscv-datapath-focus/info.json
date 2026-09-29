@@ -1,0 +1,13 @@
+{
+  "uuid": "5c8ff7fd-febb-45e2-a6d0-7b4482d0759f",
+  "type": "v3",
+  "title": "Single-cycle datapath: focus on the write-back mux",
+  "topic": "RISC-V datapath",
+  "tags": [
+    "riscv",
+    "cs61c",
+    "datapath"
+  ],
+  "gradingMethod": "Internal",
+  "partialCredit": true
+}

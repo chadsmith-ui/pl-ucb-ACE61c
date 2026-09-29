@@ -1,0 +1,18 @@
+<pl-riscv-datapath answers-name="or-test"
+    instruction="or x8 x1 x18"
+    bold-wires="j_pc1__imem_addr, j_pc1__j_pc2, j_pc2__plus4, j_pc2__amux_1, plus4__j_pc4, j_pc4__pcmux_0,
+           j_pc4__wbmux_2, alu__j_alu1, j_alu1__dmem_addr, j_alu1__j_alu2, j_alu2__pcmux_1,
+           j_alu2__wbmux_1, wbmux_out__reg_wdata, imem_inst__j_i1, j_i1__reg_rd, j_i1__j_i2,
+           j_i2__reg_rs1, j_i2__j_i3, j_i3__reg_rs2, j_i3__j_i4, j_i4__immgen_inst, j_i4__ctrl_inst,
+           reg_rdata1__j_r1, j_r1__amux_0, j_r1__brcomp_a, reg_rdata2__j_r2, j_r2__brcomp_b,
+           j_r2__j_r3, j_r3__bmux_0, immgen__bmux_1, amux__alu_a, dmem_rdata__wbmux_0,
+           pcsel__pcmux_sel, regwen__reg_wen, immsel__immgen, bsel__bmux_sel, asel__amux_sel,
+           memrw__dmem, wbsel__wbmux_sel"
+    initial-wires="pcmux_out__pc, j_alu2__pcmux_1, j_alu2__wbmux_1, wbmux_out__reg_wdata, reg_rdata1__j_r1,
+           j_r1__amux_0, j_r1__brcomp_a, reg_rdata2__j_r2, j_r2__brcomp_b, j_r2__j_r3, bmux__alu_b,
+           alusel__alu"
+    initial-off-wires="plus4__j_pc4, j_pc4__pcmux_0, j_pc4__wbmux_2, alu__j_alu1, j_alu1__dmem_addr,
+           j_alu1__j_alu2"
+    value-boxes="pcsel, bsel, memrw, asel">
+  <pl-wire name="j_alu1__dmem_addr" state="off"></pl-wire>
+</pl-riscv-datapath>

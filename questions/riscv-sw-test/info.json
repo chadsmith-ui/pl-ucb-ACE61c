@@ -1,0 +1,13 @@
+{
+  "uuid": "A9CA55B8-3C2F-410F-A356-F5A1154AC6D7",
+  "type": "v3",
+  "title": "Single-cycle datapath: toggle wire segments, SW instruction",
+  "topic": "RISC-V datapath",
+  "tags": [
+    "riscv",
+    "cs61c",
+    "datapath"
+  ],
+  "gradingMethod": "Internal",
+  "partialCredit": true
+}

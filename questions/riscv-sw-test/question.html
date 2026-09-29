@@ -1,0 +1,19 @@
+<pl-question-panel>
+  <p>Consider the single-cycle datapath and the instruction <code>sw x2 0(x17)</code>.</p>
+  <p>Click wire segments to turn them <b>ON</b> (thick red) for the data and control signals this instruction uses.
+     Where a gray box appears on a wire, enter that wire's value in <b>hexadecimal</b> (the <code>0x</code> is already shown).</p>
+</pl-question-panel>
+
+<pl-riscv-datapath answers-name="dp"
+    instruction="sw x5 0(x2)"
+    bold-wires="pcmux_out__pc, j_pc1__imem_addr, j_pc1__j_pc2, j_pc2__plus4, plus4__j_pc4, j_pc4__pcmux_0,
+           j_pc4__wbmux_2, alu__j_alu1, j_alu1__dmem_addr, j_alu1__j_alu2, j_alu2__pcmux_1,
+           j_alu2__wbmux_1, wbmux_out__reg_wdata, imem_inst__j_i1, j_i1__reg_rd, j_i1__j_i2,
+           j_i2__reg_rs1, j_i2__j_i3, j_i3__reg_rs2, j_i3__j_i4, j_i4__ctrl_inst,
+           dmem_rdata__wbmux_0, pcsel__pcmux_sel, regwen__reg_wen, immsel__immgen, bsel__bmux_sel,
+           asel__amux_sel, alusel__alu, memrw__dmem, wbsel__wbmux_sel"
+    initial-wires="pc__j_pc1, j_i1__reg_rd, j_i2__reg_rs1, j_i3__reg_rs2, j_i4__immgen_inst,
+           reg_rdata1__j_r1, j_r1__amux_0, reg_rdata2__j_r2, j_r2__j_r3, j_r3__dmem_wdata,
+           immgen__bmux_1, amux__alu_a, bmux__alu_b"
+    initial-off-wires="j_pc4__wbmux_2, j_alu2__wbmux_1, dmem_rdata__wbmux_0"
+    value-boxes="control"></pl-riscv-datapath>
