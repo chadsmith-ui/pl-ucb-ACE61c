@@ -1,0 +1,13 @@
+{
+  "uuid": "666f027e-a54f-447e-ab63-6d1008db38ca",
+  "type": "v3",
+  "title": "Datapath question builder (instructors only)",
+  "topic": "RISC-V datapath",
+  "tags": [
+    "riscv",
+    "cs61c",
+    "datapath"
+  ],
+  "gradingMethod": "Manual",
+  "singleVariant": true
+}

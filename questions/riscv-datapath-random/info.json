@@ -1,0 +1,13 @@
+{
+  "uuid": "687ca58e-90d3-4c87-b7a8-8408bee55ab0",
+  "type": "v3",
+  "title": "Single-cycle datapath: random instruction",
+  "topic": "RISC-V datapath",
+  "tags": [
+    "riscv",
+    "cs61c",
+    "datapath"
+  ],
+  "gradingMethod": "Internal",
+  "partialCredit": true
+}

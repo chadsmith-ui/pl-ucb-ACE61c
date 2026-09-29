@@ -1,0 +1,7 @@
+<pl-question-panel>
+  <p>Consider the single-cycle datapath and the instruction <code>{{params.instr}}</code>. {{params.branch_note}}</p>
+  <p>Click wire segments to turn them <b>ON</b> (thick red) for the data and control signals this instruction uses.
+     Where a gray box appears on a wire, enter that wire's value in <b>hexadecimal</b> (the <code>0x</code> is already shown).</p>
+</pl-question-panel>
+
+<pl-riscv-datapath answers-name="dp" instruction="{{params.instr}}" branch-taken="{{params.taken}}" value-boxes="pcsel, regwen, memrw"></pl-riscv-datapath>
