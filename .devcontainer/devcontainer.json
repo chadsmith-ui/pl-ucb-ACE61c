@@ -1,5 +1,6 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/universal
+// start command: docker run -it --rm -p 3000:3000 -v `pwd`:/course prairielearn/prairielearn
 {
     "name": "Launch Course",
 

@@ -6,6 +6,12 @@ LOADS = ["lw", "lh", "lb"]
 STORES = ["sw", "sh", "sb"]
 BRANCHES = ["beq", "bne", "blt", "bge"]
 
+# Every control-signal wire is a thick wire in this question.
+CONTROL_WIRES = ["pcsel__pcmux_sel", "regwen__reg_wen", "immsel__immgen", "brun__brcomp", "brcomp_breq__ctrl",
+                 "brcomp_brlt__ctrl", "bsel__bmux_sel", "asel__amux_sel", "alusel__alu", "memrw__dmem", "wbsel__wbmux_sel"]
+# y = 4 possible box places (always defined for every instruction); each variant turns on x of them.
+BOX_PLACES = ["pcsel__pcmux_sel", "regwen__reg_wen", "bsel__bmux_sel", "memrw__dmem"]
+
 
 def generate(data):
     reg = lambda: "x%d" % random.randint(1, 31)
@@ -31,3 +37,7 @@ def generate(data):
     data["params"]["instr"] = instr
     data["params"]["taken"] = taken
     data["params"]["branch_note"] = ("Assume the branch is taken." if taken == "true" else "Assume the branch is not taken.") if taken else ""
+    data["params"]["wires"] = [{"name": w} for w in CONTROL_WIRES]
+    # x boxes out of y places
+    chosen = random.sample(BOX_PLACES, random.randint(1, 3))
+    data["params"]["boxes"] = [{"loc": w} for w in BOX_PLACES if w in chosen]
